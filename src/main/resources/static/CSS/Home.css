@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+@charset "ISO-8859-1";
+
+body {background-color: #3B3E3F;}
+a   {color: white;}
+h2   {color: white;}
+div  {color: white;}
+button{
+	width:8em;
+	height:3em;
+	font-weight:bold;
+	border:1px solid black;
+	border-radius:10px;
+}
+
+button:hover{
+	border: 2px solid white;
+    button-shadow: 25px 25px white ;
+}
+
+img{
+	border:1px solid white;
+	border-radius:10px;
+}
+
+.container{
+	display:grid;
+	flex-direction:row;
+	 grid-template-columns: 1fr 2fr 2fr 1fr; 
+    grid-template-rows:0.5fr 3fr 0.3fr;
+	  grid-template-areas: 
+    "header header header header"
+    "sidebar main main  main"
+    "footer footer footer   footer ";  
+    gap:1em; 
+    width: 95vw;
+    margin-left: 30px;
+}
+  .item-a {
+    grid-area: header;
+    color:aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    text-align: center;
+   
+/*    url('https://img.freepik.com/premium-vector/cinema-poster-night-film-movies-popcorn-retro-movie-posters-template-illustration-set_102902-1871.jpg?w=2000')
+    , */
+    background-image: url('https://img.freepik.com/free-psd/scary-decoration-halloween-with-framed-horror-movie-poster_23-2148286815.jpg?w=2000&t=st=1665794081~exp=1665794681~hmac=4aa10c041f9678be793ea1f120eab15f7ca6ebd0fcfd0f43a5722a90875208e3');
+    /* border:3px solid blue;  */
+   background-size:100% 100%;
+    
+  
+    padding-top: 30px;  
+    height:40vh;
+    border-radius:10px;
+    margin-bottom:0.5em;
+  }
+ 
+
+ .item-b {
+    grid-area: sidebar;  
+    border:3px solid rgb(228, 229, 242);
+    border-radius: 10px;
+   
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .item-c{
+   grid-area: main;
+    border:3px solid rgb(228, 229, 242);
+    border-radius: 10px;
+    display:flex;  
+    justify-content: space-around;
+    flex-wrap:wrap;
+    align-items: center;
+    border:3px solid white;
+  }
+  
+  .item-c .m{  
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*     border:3px solid blue; */
+   /*  gap:1px; */
+    
+    width:20%;
+    height:40%;
+    
+    }
+  
+  .item-d {
+    grid-area: footer;
+    border-top: 3px solid rgb(228, 229, 242);
+    /*border:2px solid white; */
+  }

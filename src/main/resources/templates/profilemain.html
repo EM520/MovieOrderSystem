@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Profile</title>
+<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+</head>
+<body>
+<center class="container">
+    <div class="item-a"  >   
+    
+    <h3>
+    
+    Welcome to  <span th:text="${loginUser.name}"></span>'s  Profile
+     </h3>
+    </div>
+	<div class="item-b" >
+	
+	<a th:href="@{http://localhost:8080/api/moviesHome}"><button type=button onclick=link >Movies</button></a>
+	
+	<button>Seat</button>
+	<a th:href="@{http://localhost:8080/userslisttest}"><button type=button onclick=link >UserList</button></a>
+	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
+	
+	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
+	</div>
+	<div class="item-c" >
+	
+	<div >
+	
+	<!--<b><p th:text="${mSet.description}" ></p></b>-->
+	
+	<img src="/images/avatar.png" alt="movie1pic" width="200px" heigh="250px">
+	<h3>[[${loginUser.name}]]</h3>
+	<h3>[[${loginUser.email}]]</h3>
+	<!--<img th:src="${mSet.poster}" alt="movie1pic" width="200px" heigh="250px">-->
+	<!--<b><p th:text="${mSet.id}" ></p></b>-->
+	<!--<b><p th:text="${mlist.id}" ></p></b>-->
+	<button>Update info</button>
+	</div>
+	</div>
+	<div class="item-d">Welcome to Elena's movie theater @copy right </div>
+</center>
+</body>
+</html>

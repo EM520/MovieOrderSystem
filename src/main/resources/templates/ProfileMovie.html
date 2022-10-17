@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Movie Home</title>
+
+<script src="movieHome.js"></script>
+<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+</head>
+
+<body>
+<center class="container">
+    <div class="item-a" >
+
+    
+    </div>
+	<div class="item-b" >
+
+	<a th:href="@{http://localhost:8080/users}"><button type=button onclick=link >Profile</button></a>
+	<button>Movies</button>
+	<button>Seat</button>
+	
+	
+	
+	
+	<form th:action="@{/moviesearch/}">
+    <input type="text" name="name" placeholder="Search.." id="name" size="15" th:value="${name}" required />
+    &nbsp;
+    <a><button type=submit  >Search</button></a> 
+    
+    
+    </form>
+	
+	
+	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
+	
+	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
+	</div>
+	<div class="item-c" >
+	<!--<form th:action="@{/movie}" method="post">  -->
+	<div class="m" th:each="mSet,stats: ${movieVariable}">
+	
+	<!--<b><p th:text="${mSet.description}" ></p></b>-->
+
+	<!--<img th:src="@{${'https://image.tmdb.org/t/p/w200'+mSet.poster}}" alt="movie1pic" width="200px" heigh="250px">-->
+	<img th:src="${mSet.poster}" alt="movie1pic" width="200px" heigh="250px">
+	<!--<b><p th:text="${mSet.id}" ></p></b>-->
+	<b><p th:text="${mSet.name}" ></p></b>
+	<button type="submit" name="Submit">Get Tickets</button>
+	</div>
+	
+
+	</div>
+	<div class="item-d">Welcome to Elena's movie theater @copy right 
+		
+	</div>
+</center>
+</body>
+</html>

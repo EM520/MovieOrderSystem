@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Movies Page</title>
+<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+</head>
+<body>
+	<center class="container">
+    <div class="item-a" >
+
+    
+    </div>
+	<div class="item-b" >
+
+	<a th:href="@{http://localhost:8080/users}"><button type=button onclick=link >Profile</button></a>
+	<button>Movies</button>
+	<button>Seat</button>
+	
+	
+	
+	
+	<form th:action="@{/moviesearch/}">
+    <input type="text" name="name" placeholder="Search.." id="name" size="15" th:value="${name}" required />
+    &nbsp;
+    <button type=submit >Search</button>
+   
+     
+    
+    </form>
+	
+	
+	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
+	
+	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
+	</div>
+	<div class="item-c" >
+	<!-- <b><p th:text="${name}" ></p></b> -->
+	<div class="m" th:each="mList,stats:${listMovies}">
+	
+	
+	<img th:src="@{${'https://image.tmdb.org/t/p/w200'+mList.poster}}" alt="movie1pic" width="200px" heigh="250px">
+	<!-- <img th:src="${mList.poster}" alt="movie1pic" width="200px" heigh="250px"> -->
+	<b><p th:text="${mList.id}" ></p></b>
+	<b><p th:text="${mList.name}" ></p></b>
+	<b><p th:text="${mList.description}" ></p></b>
+	<button type="submit" name="Submit">Get Tickets</button>
+	</div> 
+	</div>
+	<div class="item-d">Welcome to Elena's movie theater @copy right 
+		
+	</div>
+</center>
+
+</body>
+</html>

@@ -17,6 +17,6 @@ Spring Boot DevTools,Spring Web,Lombok,MariaDB Driver,Thymeleaf,Spring Security,
 * src/main/resources includes data.sql to intialize a tables with dummy data when start the application.
 
 ## Authors
-Elena.liu530@gmail.com 
+Elena.liu530@gmail.com /
 www.linkedin.com/in/Elena-liu520 
 

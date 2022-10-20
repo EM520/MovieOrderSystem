@@ -50,7 +50,6 @@ public class CartController {
 
 	@PostMapping("/addMovieToCart/{id}")
 //@RequestParam("quantity")int quantity  ,@RequestParam("id")Long id,@RequestParam("quantity")int quantity
-
 	public String addMovieToCart(Model model, @PathVariable("id") Long moiveid) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		log.info("@@" + auth.getName());
@@ -121,7 +120,6 @@ public class CartController {
 		Long loginUserId = userService.findUserByEmail(auth.getName()).getId();
 		log.info("@@" + loginUserId.toString());
 		ShoppingCart cart = cartServ.findByUserId(loginUserId);
-		
 		log.info("==before" + cart.toString());
 		cart.getMovieItems().clear();
 		log.info("==after" + cart.toString());
@@ -130,5 +128,4 @@ public class CartController {
 		model.addAttribute("cart", cart);
 		return "cart";
 	}
-
 }

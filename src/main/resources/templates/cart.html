@@ -9,13 +9,13 @@
 <link rel="stylesheet" type="text/css" href="/CSS/cart.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
 	<center class="container">
-    <div class="item-a"  >   
-    
-    <h3>
-    
+    <div class="item-a"  >       
+    <h3>   
+
     shopping cart view
      </h3>
     </div>
@@ -24,7 +24,9 @@
 	<a th:href="@{http://localhost:8080/api/moviesHome}"><button type=button onclick=link >Movies</button></a>
 	
 	<button>Seat</button>
-	<a th:href="@{http://localhost:8080/usersList}"><button type=button onclick=link >UserList</button></a>
+
+	<a th:href="@{/}"><button type=button onclick=link >Home</button></a>
+
 	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
 	
 	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
@@ -38,7 +40,9 @@
 			<tr>
 				
 				<th class="text-center">Movie Detail</th>
-				<th class="text-center">Quantity</th>
+
+				<th class="text-center">Price</th>
+
 				<th class="text-center">remove</th>
 				
 			</tr>
@@ -57,25 +61,33 @@
 				</td>
 	
 				<td class="text" th:text="${movie.price}"></td> 
+
+				<!-- add the del button -->
 				<td>
-				<a href="#"><i class="fa fa-trash"></i></a>
+				<form method="post" role="form" th:action="@{'/delMovieFromCart/'+${movie.id}}">
+				<button type="submit" name="Submit"><i class="fa fa-trash" ></i></button>
+				</form> 
+
 				</td>
 			</tr>
 		</tbody>
 	</table>
-	<div>
+
+	<div class="cart-footer">
 		
-		Subtotal:<span th:text="${cart.getTotalPrice()}"></span>
-		<a href="#"><i class="fab fa-opencart"></i></a>
-		<a th:href="@{/orderConfirm}"><button type=button onclick=link >Order</button></a>
+		Subtotal: $<span th:text="${cart.getTotalPrice()}"></span>
 		
+		<form method="post" role="form" th:action="@{/clearCart}">
+			<button type="submit" name="Submit"><i class="fab fa-opencart" ></i>clear</button>
+		</form> 
+		
+		<a th:href="@{/orderConfirm}"><button type=button onclick=link >Order<i style='font-size:24px' class='fab'>&#xf1f3;</i></button></a>
 
 	</div>
 	</div>
-	<div class="cart-footer">
 	
 	</div>
-	</div>
+
 	<div class="item-d">Welcome to Elena's movie theater @copy right </div>
 </center>
 </body>

@@ -20,7 +20,9 @@ import com.elena.casestudy.movieordersystem.service.impl.UserServiceImpl;
 public class UserServiceImpl implements UserService{
 	@Autowired
 	 private UserRepository userRepository;
+	
 	    private RoleRepository roleRepository;
+
 	    private PasswordEncoder passwordEncoder;
 
 	    public UserServiceImpl(UserRepository userRepository,

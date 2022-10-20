@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+.text-center{
+	 text-align: center;
+}
+.movie-item{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+    align-items: center;
+	
+}
+th,td{
+	text-align: center;
+}
+
+.confirm{
+	height:25vh;
+	width:20vw;
+	border:1px solid white;
+	border-radius:10px;
+	background-image:url('../images/Pumpkin-Carving.jpg') ;
+	background-size:cover;
+	-webkit-background-origin:border;
+}

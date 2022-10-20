@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Profile</title>
-<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+<link rel="stylesheet" type="text/css" href="/CSS/movie_home.css"/>
 </head>
 <body>
 <center class="container">
@@ -11,15 +11,15 @@
     
     <h3>
     
-    Welcome to  <span th:text="${loginUser.name}"></span>'s  Profile
+    Welcome <span th:text="${loginUser.name}"></span>
      </h3>
     </div>
 	<div class="item-b" >
 	
 	<a th:href="@{http://localhost:8080/api/moviesHome}"><button type=button onclick=link >Movies</button></a>
 	
-	<button>Seat</button>
-	<a th:href="@{http://localhost:8080/userslisttest}"><button type=button onclick=link >UserList</button></a>
+	<a th:href="@{http://localhost:8080/shoppingCart}"><button>Shopping Cart</button></a>
+	<a th:href="@{http://localhost:8080/usersList}"><button type=button onclick=link >UserList</button></a>
 	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
 	
 	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
@@ -31,8 +31,8 @@
 	<!--<b><p th:text="${mSet.description}" ></p></b>-->
 	
 	<img src="/images/avatar.png" alt="movie1pic" width="200px" heigh="250px">
-	<h3>[[${loginUser.name}]]</h3>
-	<h3>[[${loginUser.email}]]</h3>
+	<p>[[${loginUser.name}]]</p>
+	<p>[[${loginUser.email}]]</p>
 	<!--<img th:src="${mSet.poster}" alt="movie1pic" width="200px" heigh="250px">-->
 	<!--<b><p th:text="${mSet.id}" ></p></b>-->
 	<!--<b><p th:text="${mlist.id}" ></p></b>-->

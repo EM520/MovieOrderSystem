@@ -5,5 +5,7 @@ import org.springframework.stereotype.Repository;
 import com.elena.casestudy.movieordersystem.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long>{
+	
+	// method indByEmail
 	User findByEmail(String email);
 }

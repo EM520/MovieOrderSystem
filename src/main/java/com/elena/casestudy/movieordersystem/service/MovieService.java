@@ -13,7 +13,7 @@ public class MovieService {
 	
 	@Autowired
 	private MovieRepository repo;
-	
+	//method findAllMovies by name for search feature
 	public List<Movie> findAllMovies(String name){
 		if(name!=null) {
 			return repo.getNamesLike(name);

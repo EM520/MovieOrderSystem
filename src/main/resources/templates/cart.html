@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+<link rel="stylesheet" type="text/css" href="/CSS/movie_home.css"/>
+<link rel="stylesheet" type="text/css" href="/CSS/cart.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<center class="container">
+    <div class="item-a"  >   
+    
+    <h3>
+    
+    shopping cart view
+     </h3>
+    </div>
+	<div class="item-b" >
+	
+	<a th:href="@{http://localhost:8080/api/moviesHome}"><button type=button onclick=link >Movies</button></a>
+	
+	<button>Seat</button>
+	<a th:href="@{http://localhost:8080/usersList}"><button type=button onclick=link >UserList</button></a>
+	<a th:href="@{/login}"><button type=button onclick=link >Login</button></a>
+	
+	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
+	</div>
+	<div class="item-c" >
+	<!-- Shopping Cart Section -->
+	<div class="cart-item">
+	
+	<table class="table">
+		<thead>
+			<tr>
+				
+				<th class="text-center">Movie Detail</th>
+				<th class="text-center">Quantity</th>
+				<th class="text-center">remove</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="movie:${cart.getMovieItems()}">
+				<td>
+				<div class="movie-item">
+					<!-- <a><img src=""/></a> -->
+					<div>
+					<img th:src="${movie.poster}" alt="movie1pic" width="100px" heigh="150px">
+					<!--<b><p th:text="${mSet.id}" ></p></b>-->
+					<b><p th:text="${movie.name}" ></p></b>				
+					</div>				
+				</div>
+				</td>
+	
+				<td class="text" th:text="${movie.price}"></td> 
+				<td>
+				<a href="#"><i class="fa fa-trash"></i></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		
+		Subtotal:<span th:text="${cart.getTotalPrice()}"></span>
+		<a href="#"><i class="fab fa-opencart"></i></a>
+		<a th:href="@{/orderConfirm}"><button type=button onclick=link >Order</button></a>
+		
+
+	</div>
+	</div>
+	<div class="cart-footer">
+	
+	</div>
+	</div>
+	<div class="item-d">Welcome to Elena's movie theater @copy right </div>
+</center>
+</body>
+</html>

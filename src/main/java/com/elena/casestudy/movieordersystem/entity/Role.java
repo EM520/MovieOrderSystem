@@ -18,6 +18,8 @@ import com.elena.casestudy.movieordersystem.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
@@ -27,7 +29,7 @@ import javax.persistence.EntityManager;
 @NoArgsConstructor
 @Entity
 @Table(name="roles")
-
+//Create ROLE Entity and table
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,6 +40,7 @@ public class Role {
     
 	private String name ;
 	@ManyToMany(mappedBy = "roles")
+	@ToString.Exclude
 	private List<User> users = new ArrayList<>();
 	
     public Role(String name) {

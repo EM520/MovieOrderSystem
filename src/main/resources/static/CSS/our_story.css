@@ -1,0 +1,323 @@
+@charset "ISO-8859-1";
+
+body{
+    
+    background-color: #3B3E3F;
+    font-family: arial;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+  }
+  nav ul li{
+    padding-right: 10px;
+    font-weight: bolder;
+    color: aliceblue;
+    
+  }
+  * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+    padding-top:30px;
+    width:60%;
+    margin:0 auto;  
+}
+ .main {
+    grid-area: header;
+    color:aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    text-align: center;
+   
+/*    url('https://img.freepik.com/premium-vector/cinema-poster-night-film-movies-popcorn-retro-movie-posters-template-illustration-set_102902-1871.jpg?w=2000')
+    , */
+    background-image: url('https://img.freepik.com/free-psd/scary-decoration-halloween-with-framed-horror-movie-poster_23-2148286815.jpg?w=2000&t=st=1665794081~exp=1665794681~hmac=4aa10c041f9678be793ea1f120eab15f7ca6ebd0fcfd0f43a5722a90875208e3');
+    /* border:3px solid blue;  */
+   background-size:100% 100%;
+    
+  
+    padding-top: 30px;  
+    height:40vh;
+    border-radius:10px;
+    margin-bottom:0.5em;
+  }
+
+.nav {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;   
+    margin:0 auto;
+    padding:3px;
+    width: 60%; 
+    margin-top:20px;
+    margin-bottom:10px;
+    font-family: 'Hind', sans-serif;
+    font-size: 15px;
+    color: white;
+    
+    
+}
+
+.nav li{
+    
+    background-color:rgb(176, 47, 24);
+    padding:5px 30px 5px 30px;
+    border-bottom: 3px solid rgb(231, 224, 224);
+    
+
+}
+
+
+
+.subscribe {
+    padding-left: 500px;
+    padding-right: 50px;
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    color: white;
+    
+}
+
+#fivedots{
+    width: 15px;
+    margin: auto;
+    border: 0px;
+    
+}
+
+.social img {
+    width: 35px;
+    border-bottom: 3px solid rgb(192, 191, 191);
+    
+}
+.social ul{
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+
+.top {
+    position: relative;
+    background-image: url(../IMG/product/mink-mingle-Riz1qAplMQk-unsplash.jpg);
+    background-size: 100%;
+    background-position: 15% 30%;
+    width: 59%;
+    height: 230px;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+
+.grid {
+    position: absolute;
+    background-image: url(../IMG/home/toby-osborn-ilHo9qgDEGY-unsplash.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 230px;
+    margin: 0 auto;
+    opacity: 0.3;
+}
+
+
+
+div a{
+    margin:3px;
+    padding:1px;
+}
+
+
+.button {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60px;
+    height: 10px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.article1 {
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:60%;
+    margin-bottom: 30px;
+    
+}
+
+.part1,.part2,.part3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:3px solid white;
+    border-radius:10px;
+    background:#3B3E3F;
+    height:21rem;
+    padding:15px;
+    width:30%;
+    justify-content: center;
+    border-bottom: 3px solid grey;
+    color:white;
+}
+
+.article1 h1{
+    font-Size:16px;
+    font-family: sans-serif;
+    margin:8px;
+    
+
+}
+.article1 p{
+    font-Size:15px;
+    font-family: sans-serif;
+    margin:3px;
+   
+}
+
+article a {
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #B6292A;
+    text-transform: uppercase;
+    margin: 22px;
+}
+
+article a:visited {
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color:whitesmoke;
+    text-transform: uppercase;
+    margin: 50px;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    border-color: blue;
+    width:20dx;
+    height:30px;
+    position: absolute;;
+    right:30px；
+    }
+ 
+
+  
+
+
+     footer{
+        display:flex;
+        flex-direction: row;
+        background-color:transparent;
+        padding:10px;
+        width:60%;
+        height:300px;
+        margin:0 auto;
+        border-bottom: 3px solid grey;
+       margin-bottom: 20px;
+       color:white;
+       
+    }
+    
+    .intro{
+        display:grid;
+        grid-template-columns: 1fr;
+        width:70%;
+        height:140px;
+        margin-top: 20px;
+        margin-left: 30px;
+        color:white;
+    }
+
+    .form{ 
+        
+        margin-left:5px;
+        padding:2px;
+        display:flex;
+        flex-direction: column;
+        align-items:left;
+        width:370px;
+        height:250px;
+        margin: 0 auto;
+        /* border:2px solid green; */
+    }
+
+    form ul {
+      list-style-type: none;
+    }
+    
+    .intro p{
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-top: 10px;
+        width:338px;
+        color:white;
+    }
+
+    .icons{
+        width:150px;
+        height:20px;
+        margin-top: 25px;
+        color: rgb(102, 99, 99);
+        
+    }
+     #submit{
+         width:200px;
+         height:30px;
+         background-color: #B6292A;
+         color:whitesmoke;
+         margin-left: 165px;
+         margin-top: 10px;
+         border-style: none;
+     }
+    .name{
+        width:100%;
+        height:30px;
+        margin:20px 0 5px 0;
+        
+        border-style: inset;
+        
+    }
+    .email{
+        width:100%;
+        height:30px;
+        margin:5px 0 5px 0;
+        border-style:inset;
+        border-color:grey;
+    }
+    .message{
+        width:100%;
+        height:80px;
+        margin:5px 0 0 0;
+        border-style:inset;
+        border-color:grey;
+    }
+
+    .footerp{
+      color:aliceblue;
+      
+    }

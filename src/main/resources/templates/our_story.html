@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Our Story</title>
+ <style>
+        body {font-family:"Ms Madi", cursive;}
+    </style>
+    <link rel="stylesheet" th:href="@{/css/our_story.css}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+	    <div class="main" >
+    <p>Welcome to Elena's Movie Theater </p> 
+    
+   
+    </div>
+    
+        <nav>
+            <ul>
+                <a th:href="@{/}">
+                    <li>Home</li>
+                </a>
+                <a th:href="@{/login}">
+                    <li>Login</li>
+                </a>
+                <a th:href=@{/moviesHome}>
+                    <li>Movies</li>
+                </a>
+            </ul>
+        </nav>
+    
+     <header class="header">
+        <span class="subscribe">SUBSCRIBE &bull;</span>
+         <button id="lightmode" class="fa-solid fa-sun"></button>
+         <button id="darkmode" class="fa-solid fa-moon"></button>
+        <span> <img id="fivedots" src="https://i.ibb.co/2tQwQpj/161021694724586586.png"></span>
+           <div class="social">
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png"></a></li>
+                <li><a href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-rounded/72/RSS-512.png"></a></li>
+                <li><a href="https://twitter.com/"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-twitter-512.png"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="https://cdn2.iconfinder.com/data/icons/social-media-icon-set-6/94/youtube-512.png"></a></li>
+            </ul>
+        </div>
+        </header>
+             
+       
+       
+        
+        <div class="article1">
+            <div class="part1">
+                <h1>Tony Hawk Foundation Raises Big Money At Celeb Fundrasier</h1>
+                <p class="date">October 10, 2013</p>
+                <p class="text">It was just over 90 degrees in Los Angeles, but that didn't stop the throngs from coming out to celebrate the 10th Annual Tony Hawk's Stand Up For Skateparks Benefit Presented by SLS Hotel & Casino Las Vegas on Saturday at the Green Acres Estate in Beverly Hills.</p>
+                <a href="#">[ read more ]</a>
+            </div>
+            <div class="part2">
+                <h1>Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h1>
+                <p class="date">March 10, 2013</p>
+                <p class="text">The last thing Rodney Mullen, the godfather of street skating, wanted was competitive victories. In this exuberant talk, he shares his love of the open skateboarding community and how the unique environments it plays in drive the creation of new tricks -- fostering...</p>
+                <a href="#">[ read more ]</a>
+            </div>
+            <div class="part3">
+                <h1>Ray Barbee talks 'Ban This'</h1>
+                <p class="date">October 4, 2013</p>
+                <p class="text">Since filming is in full swing for the Vans video, 'Adventures With Chris' has taken the opportunity to sit some of the team down to look behind the skating in some of the earlier parts. Today we sit down Ray Barbee, one of the smoothest guys to ever step on a skateboard, and Chris' childhood idol...</p>
+                <a href="#">[ read more ]</a>
+            </div>
+
+          
+        
+    </div>
+    <footer class="footer">
+    
+            <div class="intro">
+                <span style="color:black;font-family:sans-serif;font-size:20px;">
+                    Contact Us for More Information
+                </span>
+                <p style="color:grey;font-family:Arial, Helvetica, sans-serif;"> 
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam 
+                 semper nulla ut odio secelerisque varius.Phasellus dui nunc,
+                 lacinia at vehicula congue,vehicula nec tellus.Morbi dignissim
+                 rutrum lorem at tincidunt.
+                </p>
+                <div class="icons">
+                    <span class="fab fa-facebook-square fa-lg" aria-hidden="true"></span>
+                    <span class="fa fa-rss-square fa-lg" aria-hidden="true"></span>
+                    <span class="fab fa-twitter-square fa-lg" aria-hidden="true"></span>
+                     <span class="fa fa-youtube-square fa-lg" aria-hidden="true"></span>
+                </div>
+            </div>
+        
+           
+           
+    
+            <form class="form">
+            <ul>
+                <li>
+                    <input class="name"type="text" name="name" placeholder="NAME"></input>   
+                    
+                </li>
+                <li>
+                    <input class="email"type="text" name="email" placeholder="EMAIL"></input>   
+                </li>
+                <li>
+                    <input class="message" placeholder="YOUR MESSAGE" > </input>   
+                </li>
+              </ul>
+        
+                 <button type="submit" id="submit" value="Submit">Submit</button>
+    
+              </form>
+              </div>
+            
+
+         </footer>
+         <p class="footerp" align="center">Privacy Do Not Sell My Personal Information Terms & Conditions  Internet Based Ads California Supply Chain  Act     ©2022 Elena Movie Theater</p>
+             <script type="text/javascript" th:src="@{/js/our_story.js}"></script>
+</body>
+</html>

@@ -31,11 +31,10 @@ public class MovieTestController {
 		return movieRepository.findAll();
 	}
 	
-	@RequestMapping("/moviesearch/")
+	@RequestMapping("/movieSearch/")
 
 	public String viewSearchPage(Model model,@RequestParam("name") String name) {
-		//List<Movie> listMovies =movieService.findAllMovies(name);
-		
+			
        List<Movie> listMovies =movieRepository.getNamesLike(name);
 		for (Movie item : listMovies) {
 			  System.out.println("%%%"+item+"***********************");
@@ -43,7 +42,7 @@ public class MovieTestController {
 		model.addAttribute("listMovies", listMovies);
         model.addAttribute("name", name);
         //return "name"+name;
-       return "searchMovie";
+       return "search_movie";
 	}
 	
 }

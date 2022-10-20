@@ -2,8 +2,18 @@
 
 body {background-color: #3B3E3F;}
 a   {color: white;}
-h2   {color: white;}
+h3   {
+	color: white;
+	font-size:5vw;;
+	}
 div  {color: white;}
+
+.login-card{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 button{
 	width:8em;
 	height:3em;
@@ -23,6 +33,7 @@ input[type=text] {
   border: none;
   margin:8px 15px 8px 15px;
   font-size: 15px;
+ 
 }
 
 img{
@@ -77,14 +88,14 @@ img{
   }
   
   .item-c{
-   grid-area: main;
+    grid-area: main;
     border:3px solid rgb(228, 229, 242);
     border-radius: 10px;
     display:flex;  
     justify-content: space-around;
     flex-wrap:wrap;
     align-items: center;
-    border:3px solid white;
+    /* border:3px solid white;  */
   }
   
   .item-c .m{  
@@ -93,11 +104,23 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*     border:3px solid blue; */
+   /*  border:3px solid blue;  */
     gap:5px;
     
     width:23%;
     height:48%;
+    
+    }
+    .item-c .main{  
+    /*background-color: #6abbe0;*/ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /*   border:3px solid blue;  */
+    
+    width:18%;
+    height:30%;
     
     }
   

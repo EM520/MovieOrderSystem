@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Search Movies Page</title>
-<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+<link rel="stylesheet" type="text/css" href="/CSS/movie_home.css"/>
 </head>
 <body>
 	<center class="container">
@@ -20,7 +20,7 @@
 	
 	
 	
-	<form th:action="@{/moviesearch/}">
+	<form th:action="@{/movieSearch/}">
     <input type="text" name="name" placeholder="Search.." id="name" size="15" th:value="${name}" required />
     &nbsp;
     <button type=submit >Search</button>

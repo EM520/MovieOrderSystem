@@ -28,6 +28,7 @@ import lombok.Data;
 //@JsonIdentityInfo(
 //        generator = ObjectIdGenerators.PropertyGenerator.class,
 //        property = "id")
+//Create ORDER Entity and table
 @Table(name = "orders")
 public class Order {
 	@Id
@@ -39,7 +40,7 @@ public class Order {
 	private User user;
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade = CascadeType.ALL,targetEntity=ShoppingCart.class)
-	@JoinColumn(name="orderId",referencedColumnName="id")
+	@JoinColumn(name="orderIdfromorder",referencedColumnName="id")
 	private List<ShoppingCart> cartItems;
 	
 	public Order() {}
@@ -50,8 +51,8 @@ public class Order {
 		this.cartItems = cartItems;
 	}
 
-	@Column(nullable = false)
-	private Long cust_id;
+//	@Column(nullable = false)
+//	private Long user_id;
 	@Column(nullable = false)
 	private BigDecimal price;
 	@Column(nullable = false)

@@ -69,7 +69,7 @@ public class MovieResource {
 	  			}
 		    model.addAttribute("movieVariable", listMovies);
 		    	
-	        return "ProfileMovie";
+	        return "profile_movie";
 	}	
 	
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Movie Home</title>
+ 
+<script src="movieHome.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/CSS/movie_home.css"/>
+</head>
+
+<body>
+<center class="container">
+    <div class="item-a" >
+    <p>Welcome to Elena's Movie Theater </p> 
+    
+    </div>
+   
+   
+	<div class="item-b" > 
+		<a th:href="@{/ourStory}"><button type=button onclick=link>Our Story</button></a>
+ 
+                <a th:href="@{/}">
+                    <button type=button onclick=link>Home</button>
+                </a>
+                <a th:href="@{/login}">
+                    <button type=button onclick=link>Login</button>
+                </a>
+                <a th:href="@{/register}">
+                    <button type=button onclick=link>Register</button>
+                </a>
+        
+         <!-- <div class="login-card">
+			<center >
+				<form method="post" role="form" th:action="@{/login}"
+					class="form-horizontal">
+					<div class="form-group mb-3">
+						<label class="control-label" th:field="*{email}"> Email</label> <input
+							type="text" id="username" name="username" class="form-control"
+							placeholder="Enter email address" />
+					</div>
+
+					<div class="form-group mb-3">
+						<label class="control-label"> Password</label> <input
+							type="password" id="password" name="password"
+							class="form-control" placeholder="Enter password" />
+					</div>
+					<div class="form-group mb-3">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<span> Not registered ? <a th:href="@{/register}">Register/Signup
+								here</a>
+						</span>
+					</div>
+				</form>
+			</center>
+		</div>	 -->			
+
+
+
+		</div> 
+	<div class="item-c" >
+	<!--<form th:action="@{/movie}" method="post">  -->
+	<div class="main" th:each="mSet,stats: ${movieVariable}">
+	
+	<!--<b><p th:text="${mSet.description}" ></p></b>-->
+
+	<!--<img th:src="@{${'https://image.tmdb.org/t/p/w200'+mSet.poster}}" alt="movie1pic" width="200px" heigh="250px">-->
+	<img th:src="${mSet.poster}" alt="movie1pic" width="320px" heigh="220px">
+	<!--<b><p th:text="${mSet.id}" ></p></b>-->
+	<b><p th:text="${mSet.name}" ></p></b>
+	
+	</div>
+	
+
+	</div>
+	<div class="item-d">Welcome to Elena's movie theater @copy right 
+		
+	</div>
+</center>
+</body>
+</html>

@@ -75,7 +75,7 @@ public class AuthController {
   			}
 		   
 		    	model.addAttribute("movieVariable", movieSet);
-	        return "movieHome";
+	        return "movie_home";
 	        
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -127,11 +127,11 @@ public class AuthController {
 	}
 
 	 //handler method is used to handle a list of users
-    @GetMapping("/userslist")
+    @GetMapping("/usersList")
     public String userslist(Model model) {
     		List<UserDto> users = userService.findAllUsers();
     		model.addAttribute("users", users);
-            return "usersinfo";
+            return "users_info";
     }
 
 	// @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -145,9 +145,12 @@ public class AuthController {
 //		
 //		//get user data from DB
         model.addAttribute("loginUser",loginUser);
-		return "profilemain";
+		return "profile_main";
 	}
-	
+	@GetMapping("/ourStory")
+	public String showOurStory() {
+		return "our_story";
+	}
 
 	
 }

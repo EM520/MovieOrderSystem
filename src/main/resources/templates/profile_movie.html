@@ -5,7 +5,8 @@
 <title>Movie Home</title>
 
 <script src="movieHome.js"></script>
-<link rel="stylesheet" type="text/css" href="/CSS/movieHome.css"/>
+<link rel="stylesheet" type="text/css" href="/CSS/movie_home.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 	
 	
 	
-	<form th:action="@{/moviesearch/}">
+	<form th:action="@{/movieSearch/}">
     <input type="text" name="name" placeholder="Search.." id="name" size="15" th:value="${name}" required />
     &nbsp;
     <a><button type=submit  >Search</button></a> 
@@ -37,6 +38,7 @@
 	<a  th:href="@{/logout}"><button type=button onclick=link>Logout</button></a>
 	</div>
 	<div class="item-c" >
+	
 	<!--<form th:action="@{/movie}" method="post">  -->
 	<div class="m" th:each="mSet,stats: ${movieVariable}">
 	
@@ -44,9 +46,16 @@
 
 	<!--<img th:src="@{${'https://image.tmdb.org/t/p/w200'+mSet.poster}}" alt="movie1pic" width="200px" heigh="250px">-->
 	<img th:src="${mSet.poster}" alt="movie1pic" width="200px" heigh="250px">
-	<!--<b><p th:text="${mSet.id}" ></p></b>-->
+	<!-- <b><p th:text="${mSet.id}" ></p></b> -->
 	<b><p th:text="${mSet.name}" ></p></b>
+	<div class="add">
+		<a href="#"><i class="fa fa-heart"></i></a>
+		<a href="#"><i class="fab fa-opencart"></i></a>
+	</div>
+	<form method="post" role="form" th:action="@{'/addMovieToCart/'+${mSet.id}}">
+	<!-- <input type="text" name="quantity" id="quantity" size="3" th:value="${quantity}" required /> -->
 	<button type="submit" name="Submit">Get Tickets</button>
+	</form>
 	</div>
 	
 
